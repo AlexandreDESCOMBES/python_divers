@@ -64,10 +64,10 @@ try:
                             if len(intervals) >= 2:
                                 avg_interval = sum(intervals) / len(intervals)
                                 avg_freq = 1.0 / avg_interval
-                                print(f"Fréquence moyenne : {avg_freq:.2f} Hz", flush=True)
+                                #print(f"Fréquence moyenne : {avg_freq:.2f} Hz", flush=True)
                         last_time = current_time
                         angle_site = struct.unpack(">b", buffer[3:4])[0]  # int8 signé
-                        #print(f"Angle de site : {angle_site} °", flush=True)
+                        print(f"Angle de site : {angle_site} °", flush=True)
                     else:
                         print("Checksum invalide !", flush=True)
                 buffer.clear()
