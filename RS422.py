@@ -3,7 +3,7 @@ import struct
 import time
 from collections import deque
 
-PORT = '\\\\.\\COM10'  # ou '\\\\.\\COM10'
+PORT = 'COM6'  # ou '\\\\.\\COM10'
 BAUDRATE = 9600
 
 last_time = None
@@ -24,7 +24,7 @@ try:
             if not byte:
                 continue
             b = byte[0]
-
+            print(b)
             if len(buffer) == 0:
                 if b == 0x64:  # Début de trame
                     buffer.append(b)
